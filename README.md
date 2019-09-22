@@ -4,4 +4,13 @@ This is a rewrite of the Metasploit module in Python, to be used outside Metaspl
 
 Tested on Tiki Wiki 15.1 running on mysql 5.5.50 x64, php 5.6.40, Ubuntu Server 16.04.6 LTS
 ## Usage
-`python3 tikiwiki_15.1_RCE --url 'http://192.168.92.151/tiki' --php payload.php`
+```
+root@Kali:~/# python3 tikiwiki_15.1_RCE.py -h
+usage: tikiwiki_15.1_RCE.py [-h] -U URL -P PHP
+
+Required arguments:
+  -U URL, --url URL  URL of the Tiki Wiki page eg.
+                     http://webserver.com/tikiwiki
+  -P PHP, --php PHP  Path to php payload eg. payload.php
+root@Kali:~/# python3 tikiwiki_15.1_RCE --url 'http://192.168.92.151/tiki' --php payload.php
+```
