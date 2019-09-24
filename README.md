@@ -8,6 +8,7 @@ Tested with Python 3.7 on target Tiki Wiki 15.1 running on
 * Ubuntu Server 16.04.6 LTS
 
 Note the php payload doesn't execute if generated with base64 encoding. Don't use `-e php/base64` with `msfvenom`.
+Explanatory [blog article here](https://ivanitlearning.wordpress.com/2019/09/25/ruby-exploit-rewrite-tiki-wiki-15-1-unrestricted-file-upload/).
 
 ## Usage
 ```
